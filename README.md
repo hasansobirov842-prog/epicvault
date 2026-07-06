@@ -5,3 +5,9 @@ body{
     color:#fff;
     text-align:center;
 }
+h1{
+    margin:25px 0;
+    font-size:32px;
+    color:#a855f7;
+    text-shadow:0 0 15px #a855f7;
+}
