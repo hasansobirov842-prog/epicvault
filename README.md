@@ -11,3 +11,23 @@ h1{
     color:#a855f7;
     text-shadow:0 0 15px #a855f7;
 }
+button{
+    width:92%;
+    max-width:340px;
+    margin:10px auto;
+    padding:16px;
+    font-size:18px;
+    border:none;
+    border-radius:18px;
+    background:linear-gradient(90deg,#6d28d9,#9333ea);
+    color:#fff;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    box-shadow:0 0 15px rgba(168,85,247,.4);
+}
+button:hover{
+    transform:scale(1.03);
+}
