@@ -81,6 +81,70 @@
 <button>👤 Profile</button>
 </div>
 
-</body>
-</html>
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+}
+
+.page {
+  padding-bottom: 80px;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 15px;
+  left: 10px;
+  right: 10px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 5px;
+  box-shadow: 0 0 20px rgba(0,255,200,0.15);
+}
+
+.bottom button {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  transition: 0.2s;
+}
+
+.bottom button.active {
+  color: #00ffc8;
+  transform: scale(1.1);
+}
+</style>
+
+<div class="page">
+  <div id="home">🏠 Home</div>
+  <div id="cases" style="display:none">🎁 Cases</div>
+  <div id="stars" style="display:none">⭐ Stars</div>
+  <div id="profile" style="display:none">👤 Profile</div>
+</div>
+
+<div class="bottom">
+  <button class="active" onclick="go(this,'home')">🏠<span>Home</span></button>
+  <button onclick="go(this,'cases')">🎁<span>Cases</span></button>
+  <button onclick="go(this,'stars')">⭐<span>Stars</span></button>
+  <button onclick="go(this,'profile')">👤<span>Profile</span></button>
+</div>
+
+<script>
+function go(btn,page){
+  document.querySelectorAll(".page > div").forEach(e => e.style.display="none");
+  document.getElementById(page).style.display="block";
+
+  document.querySelectorAll(".bottom button").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+}
+</script>
 
