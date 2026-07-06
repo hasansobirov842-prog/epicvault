@@ -31,3 +31,16 @@ button{
 button:hover{
     transform:scale(1.03);
 }
+<button>⭐ Buy Stars</button>
+<button>💎 Premium Cases</button>
+<button>🎁 Free Cases</button>
+<button>🎰 Slots</button>
+<button>💥 Crash</button>
+<button>🎲 Dice</button>
+<button>🃏 Blackjack</button>
+<button>💰 Wallet</button>
+<button>👥 Referrals</button>
+<button>🎯 Tasks</button>
+<button>🏆 Leaderboard</button>
+<button>🎧 Support</button>
+<button>⚙️ Settings</button>
