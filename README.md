@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EpicVault</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<!DOCTYPE html>
 <html>
 <head>
 <title>EpicVault</title>
@@ -25,7 +17,7 @@ body {
   padding-bottom: 90px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
   background: #1a1a1a;
   padding: 12px;
@@ -89,6 +81,7 @@ body {
 <!-- CASES -->
 <div id="cases" class="page" style="display:none">
   <h2>🎁 Cases</h2>
+
   <div class="card">Free Case</div>
   <div class="card">Premium Case</div>
 </div>
@@ -96,6 +89,7 @@ body {
 <!-- PROFILE -->
 <div id="profile" class="page" style="display:none">
   <h2>👤 Profile</h2>
+
   <div class="card">User: EpicVault Player</div>
 </div>
 
@@ -108,7 +102,6 @@ body {
 
 <script>
 function go(btn, page){
-
   document.querySelectorAll(".page").forEach(p => p.style.display = "none");
   document.getElementById(page).style.display = "block";
 
@@ -119,5 +112,6 @@ function go(btn, page){
 
 </body>
 </html>
+
 
 
