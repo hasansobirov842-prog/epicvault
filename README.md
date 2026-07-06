@@ -6,80 +6,10 @@
 <title>EpicVault</title>
 <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-
-<div class="top">
-<div class="logo">🎮 EPIC VAULT</div>
-
-<div class="balance">
-<div class="card">
-<p>Balance</p>
-<h2>0 ⭐</h2>
-</div>
-
-<div class="card purple">
-<p>Wallet</p>
-<h2>TON</h2>
-</div>
-</div>
-</div>
-
-<div class="banner">
-<h1>OPEN CASES</h1>
-<p>Win Stars • TON • Gifts</p>
-<button class="play">PLAY NOW</button>
-</div>
-
-<div class="grid">
-
-<div class="item">
-<div class="icon">🎁</div>
-<h3>Free Cases</h3>
-</div>
-
-<div class="item">
-<div class="icon">💎</div>
-<h3>Premium Cases</h3>
-</div>
-
-<div class="item">
-<div class="icon">⭐</div>
-<h3>Buy Stars</h3>
-</div>
-
-<div class="item">
-<div class="icon">💰</div>
-<h3>Wallet</h3>
-</div>
-
-<div class="item">
-<div class="icon">👥</div>
-<h3>Referrals</h3>
-</div>
-
-<div class="item">
-<div class="icon">🎯</div>
-<h3>Tasks</h3>
-</div>
-
-<div class="item">
-<div class="icon">🏆</div>
-<h3>Leaderboard</h3>
-</div>
-
-<div class="item">
-<div class="icon">⚙️</div>
-<h3>Settings</h3>
-</div>
-
-</div>
-
-<div class="bottom">
-<button>🏠 Home</button>
-<button>🎁 Cases</button>
-<button>👤 Profile</button>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<title>EpicVault</title>
 
 <style>
 body {
@@ -89,10 +19,21 @@ body {
   color: white;
 }
 
+/* PAGE */
 .page {
-  padding-bottom: 80px;
+  padding: 20px;
+  padding-bottom: 90px;
 }
 
+/* CARDS */
+.card {
+  background: #1a1a1a;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+}
+
+/* BOTTOM MENU */
 .bottom {
   position: fixed;
   bottom: 15px;
@@ -110,12 +51,10 @@ body {
   background: none;
   border: none;
   color: #aaa;
-  font-size: 13px;
+  font-size: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
-  transition: 0.2s;
 }
 
 .bottom button.active {
@@ -123,28 +62,62 @@ body {
   transform: scale(1.1);
 }
 </style>
+</head>
 
-<div class="page">
-  <div id="home">🏠 Home</div>
-  <div id="cases" style="display:none">🎁 Cases</div>
-  <div id="stars" style="display:none">⭐ Stars</div>
-  <div id="profile" style="display:none">👤 Profile</div>
+<body>
+
+<!-- HOME -->
+<div id="home" class="page">
+  <h2>🎮 EPIC VAULT</h2>
+
+  <div class="card">💰 Balance: 0 ⭐</div>
+  <div class="card">Wallet: TON</div>
+  <div class="card">🔥 OPEN CASES</div>
+  <div class="card">Win Stars • TON • Gifts</div>
+  <div class="card">🚀 PLAY NOW</div>
+
+  <div class="card">🎁 Free Cases</div>
+  <div class="card">💎 Premium Cases</div>
+  <div class="card">⭐ Buy Stars</div>
+  <div class="card">💰 Wallet</div>
+  <div class="card">👥 Referrals</div>
+  <div class="card">🎯 Tasks</div>
+  <div class="card">🏆 Leaderboard</div>
+  <div class="card">⚙️ Settings</div>
 </div>
 
+<!-- CASES -->
+<div id="cases" class="page" style="display:none">
+  <h2>🎁 Cases</h2>
+  <div class="card">Free Case</div>
+  <div class="card">Premium Case</div>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="page" style="display:none">
+  <h2>👤 Profile</h2>
+  <div class="card">User: EpicVault Player</div>
+</div>
+
+<!-- BOTTOM MENU -->
 <div class="bottom">
-  <button class="active" onclick="go(this,'home')">🏠<span>Home</span></button>
-  <button onclick="go(this,'cases')">🎁<span>Cases</span></button>
-  <button onclick="go(this,'stars')">⭐<span>Stars</span></button>
-  <button onclick="go(this,'profile')">👤<span>Profile</span></button>
+  <button class="active" onclick="go(this,'home')">🏠 Home</button>
+  <button onclick="go(this,'cases')">🎁 Cases</button>
+  <button onclick="go(this,'profile')">👤 Profile</button>
 </div>
 
 <script>
-function go(btn,page){
-  document.querySelectorAll(".page > div").forEach(e => e.style.display="none");
-  document.getElementById(page).style.display="block";
+function go(btn, page){
+
+  document.querySelectorAll(".page").forEach(p => p.style.display = "none");
+  document.getElementById(page).style.display = "block";
 
   document.querySelectorAll(".bottom button").forEach(b => b.classList.remove("active"));
   btn.classList.add("active");
 }
 </script>
+
+</body>
+</html>
+
 
