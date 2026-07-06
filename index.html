@@ -1,44 +1,170 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>EpicVault</title>
+<title>EpicVault PRO</title>
 
 <style>
 body{
-    margin:0;
-    font-family:Arial;
-    background:#0f0f0f;
-    color:white;
-    text-align:center;
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(180deg,#0b1020,#0f172a,#0f0f0f);
+  color:white;
 }
 
-h1{
-    margin:20px;
-    color:#a855f7;
+/* HEADER */
+header{
+  text-align:center;
+  padding:20px;
 }
 
-button{
-    width:90%;
-    max-width:300px;
-    margin:10px auto;
-    padding:15px;
-    border:none;
-    border-radius:15px;
-    background:#6d28d9;
-    color:white;
-    display:block;
+header h1{
+  margin:0;
+  color:#a855f7;
+  text-shadow:0 0 15px #a855f7;
+}
+
+/* BALANCE */
+.balance{
+  margin:10px;
+  padding:12px;
+  background:#1a1a1a;
+  border-radius:12px;
+  text-align:center;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  padding:10px;
+  padding-bottom:100px;
+}
+
+.grid button{
+  padding:15px;
+  border:none;
+  border-radius:15px;
+  background:linear-gradient(90deg,#6d28d9,#9333ea);
+  color:white;
+  font-size:14px;
+  transition:0.2s;
+}
+
+.grid button:active{
+  transform:scale(0.97);
+}
+
+/* PAGES */
+.page{display:none;}
+.page.active{display:block;}
+
+/* BOTTOM MENU */
+.bottom{
+  position:fixed;
+  bottom:10px;
+  left:10px;
+  right:10px;
+  background:#111827;
+  border-radius:20px;
+  display:flex;
+  justify-content:space-around;
+  padding:10px;
+}
+
+.bottom button{
+  background:none;
+  border:none;
+  color:#aaa;
+  font-size:12px;
+}
+
+.bottom button.active{
+  color:#00ffc8;
+  transform:scale(1.1);
 }
 </style>
 </head>
 
 <body>
 
-<h1>🎮 EpicVault</h1>
+<!-- HOME -->
+<div id="home" class="page active">
+
+<header>
+  <h1>🎮 EpicVault PRO</h1>
+</header>
+
+<div class="balance">💰 Balance: 0 ⭐</div>
+
+<div class="grid">
 
 <button>⭐ Buy Stars</button>
-<button>🎁 Free Cases</button>
 <button>💎 Premium Cases</button>
+<button>🎁 Free Cases</button>
+<button>🎰 Slots</button>
+<button>💥 Crash</button>
+<button>🎲 Dice</button>
+<button>🃏 Blackjack</button>
 <button>💰 Wallet</button>
+<button>👥 Referrals</button>
+<button>🎯 Tasks</button>
+<button>🏆 Leaderboard</button>
+<button>⚙️ Settings</button>
+
+</div>
+
+</div>
+
+<!-- CASES -->
+<div id="cases" class="page">
+
+<header><h1>🎁 Cases</h1></header>
+
+<div class="balance">
+Free Case<br><br>
+Premium Case
+</div>
+
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="page">
+
+<header><h1>👤 Profile</h1></header>
+
+<div class="balance">
+User: EpicVault Player<br>
+Balance: 0 ⭐
+</div>
+
+</div>
+
+<!-- BOTTOM MENU -->
+<div class="bottom">
+
+<button class="active" onclick="go('home',this)">🏠</button>
+<button onclick="go('cases',this)">🎁</button>
+<button onclick="go('profile',this)">👤</button>
+
+</div>
+
+<script>
+function go(page,btn){
+
+  document.querySelectorAll(".page").forEach(p=>{
+    p.classList.remove("active");
+  });
+
+  document.getElementById(page).classList.add("active");
+
+  document.querySelectorAll(".bottom button").forEach(b=>{
+    b.classList.remove("active");
+  });
+
+  btn.classList.add("active");
+}
+</script>
 
 </body>
 </html>
