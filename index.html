@@ -1,306 +1,125 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>EpicVault Premium</title>
+<title>EpicVault</title>
 
 <style>
 *{
- margin:0;
- padding:0;
- box-sizing:border-box;
- font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
- background:#080812;
- color:white;
- min-height:100vh;
+background:#0d0d18;
+color:white;
+padding-bottom:90px;
 }
 
-.container{
- padding:20px;
-}
-
-.header{
- display:flex;
- justify-content:space-between;
- align-items:center;
-}
-
-.logo{
- font-size:26px;
- font-weight:bold;
- color:#00eaff;
+header{
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+background:linear-gradient(90deg,#7b2ff7,#00c6ff);
+box-shadow:0 0 20px rgba(0,0,0,.4);
 }
 
 .balance{
- margin-top:20px;
- background:linear-gradient(135deg,#17172b,#25255a);
- padding:20px;
- border-radius:20px;
- box-shadow:0 0 20px #00eaff55;
+margin:20px;
+padding:20px;
+background:#1b1b2d;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,.3);
 }
 
-.balance h3{
- color:#aaa;
+.balance h2{
+font-size:20px;
+margin-bottom:10px;
 }
 
-.balance p{
- font-size:32px;
- margin-top:10px;
- color:#ffd700;
+.amount{
+font-size:34px;
+font-weight:bold;
+color:#ffd700;
 }
 
-.card-grid{
- margin-top:20px;
- display:grid;
- grid-template-columns:repeat(2,1fr);
- gap:15px;
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:20px;
 }
 
 .card{
- background:#151526;
- padding:20px;
- border-radius:18px;
- text-align:center;
- border:1px solid #29294a;
+background:#1b1b2d;
+border-radius:20px;
+padding:25px;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.25s;
 }
 
-.card span{
- font-size:30px;
+.card:hover{
+transform:scale(1.05);
+background:#2b2b44;
 }
 
-.card h4{
- margin-top:10px;
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#161625;
+display:flex;
+justify-content:space-around;
+padding:15px 0;
 }
 
-button{
- background:#00eaff;
- border:none;
- padding:12px 20px;
- border-radius:15px;
- font-weight:bold;
- margin-top:15px;
+.bottom button{
+background:none;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
 }
-
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
-
-<div class="header">
-<div class="logo">🎮 EpicVault</div>
-<div>⭐ 0</div>
-</div>
+<header>
+🎮 EpicVault
+</header>
 
 <div class="balance">
-<h3>Balance</h3>
-<p>0 ⭐</p>
-</div>
-<div class="card-grid">
-
-<div class="card">
-<span>🎁</span>
-<h4>Free Cases</h4>
-<button>OPEN</button>
+<h2>Balance</h2>
+<div class="amount">0 ⭐</div>
 </div>
 
-<div class="card">
-<span>💎</span>
-<h4>Premium Cases</h4>
-<button>OPEN</button>
-</div>
+<div class="grid">
 
-<div class="card">
-<span>🚀</span>
-<h4>Crash</h4>
-<button>PLAY</button>
-</div>
+<div class="card">🎁<br>Free Cases</div>
 
-<div class="card">
-<span>🎲</span>
-<h4>Slots</h4>
-<button>PLAY</button>
-</div>
+<div class="card">💎<br>Premium Cases</div>
 
-<div class="card">
-<span>⭐</span>
-<h4>Buy Stars</h4>
-<button>BUY</button>
-</div>
+<div class="card">⭐<br>Buy Stars</div>
 
-<div class="card">
-<span>💰</span>
-<h4>Wallet</h4>
-<button>OPEN</button>
-</div>
-
-</div>
-<!-- Bottom Menu -->
-
-<div class="bottom-menu">
-
-<div>
-🏠
-<p>Home</p>
-</div>
-
-<div>
-🎁
-<p>Cases</p>
-</div>
-
-<div>
-👤
-<p>Profile</p>
-</div>
+<div class="card">💰<br>Wallet</div>
 
 </div>
 
+<div class="bottom">
+<button>🏠 Home</button>
+<button>🎮 Cases</button>
+<button>👤 Profile</button>
 </div>
 
 </body>
 </html>
-button{
- background:#00eaff;
- border:none;
- padding:12px 20px;
- border-radius:15px;
- font-weight:bold;
- margin-top:15px;
-}
-
-/* 4-QISM SHU YERGA */.bottom-menu{
- position:fixed;
- bottom:15px;
- left:20px;
- right:20px;
- background:linear-gradient(135deg,#151526,#25255a);
- border-radius:20px;
- display:flex;
- justify-content:space-around;
- padding:15px;
- box-shadow:0 0 25px #00eaff55;
-}
-
-.bottom-menu div{
- text-align:center;
- color:#aaa;
- font-size:14px;
-}
-
-.bottom-menu p{
- margin-top:5px;
-}
-
-.card:hover{
- transform:translateY(-5px);
- box-shadow:0 0 20px #00eaff;
- transition:.3s;
-}
-body{
- overflow-x:hidden;
-}
-
-.logo{
- text-shadow:0 0 15px #00eaff;
-}
-
-.balance{
- animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
- from{
-  box-shadow:0 0 15px #00eaff55;
- }
- to{
-  box-shadow:0 0 35px #00eaffaa;
- }
-}
-
-.card{
- transition:.3s;
-}
-
-.card button{
- cursor:pointer;
-}
-
-button:hover{
- transform:scale(1.05);
- box-shadow:0 0 20px #00eaff;
-}
-.card{
- background:linear-gradient(145deg,#151526,#20204a);
-}
-
-.card span{
- filter:drop-shadow(0 0 8px #00eaff);
-}
-
-.bottom-menu div:hover{
- color:#00eaff;
- transform:scale(1.1);
- transition:.3s;
-}
-
-.balance p{
- text-shadow:0 0 15px #ffd700;
-}
-
-.header div:last-child{
- color:#ffd700;
- font-weight:bold;
-}
-.card{
- background:linear-gradient(145deg,#151526,#20204a);
-}
-
-.card span{
- filter:drop-shadow(0 0 8px #00eaff);
-}
-
-.bottom-menu div:hover{
- color:#00eaff;
- transform:scale(1.1);
- transition:.3s;
-}
-
-.balance p{
- text-shadow:0 0 15px #ffd700;
-}
-
-.header div:last-child{
- color:#ffd700;
- font-weight:bold;
-}
-.profile-box{
- margin-top:20px;
- background:linear-gradient(135deg,#151526,#303060);
- padding:20px;
- border-radius:20px;
- text-align:center;
- display:none;
-}
-
-.profile-box h2{
- color:#00eaff;
-}
-
-.profile-box p{
- margin-top:10px;
- color:#aaa;
-}
-
-.vip{
- color:#ffd700;
- font-weight:bold;
- text-shadow:0 0 10px #ffd700;
-}
