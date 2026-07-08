@@ -1,170 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
-<title>EpicVault PRO</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EpicVault Premium</title>
 
 <style>
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family:Arial, sans-serif;
+}
+
 body{
-  margin:0;
-  font-family:Arial;
-  background:linear-gradient(180deg,#0b1020,#0f172a,#0f0f0f);
-  color:white;
+ background:#080812;
+ color:white;
+ min-height:100vh;
 }
 
-/* HEADER */
-header{
-  text-align:center;
-  padding:20px;
+.container{
+ padding:20px;
 }
 
-header h1{
-  margin:0;
-  color:#a855f7;
-  text-shadow:0 0 15px #a855f7;
+.header{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
 }
 
-/* BALANCE */
+.logo{
+ font-size:26px;
+ font-weight:bold;
+ color:#00eaff;
+}
+
 .balance{
-  margin:10px;
-  padding:12px;
-  background:#1a1a1a;
-  border-radius:12px;
-  text-align:center;
+ margin-top:20px;
+ background:linear-gradient(135deg,#17172b,#25255a);
+ padding:20px;
+ border-radius:20px;
+ box-shadow:0 0 20px #00eaff55;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  padding:10px;
-  padding-bottom:100px;
+.balance h3{
+ color:#aaa;
 }
 
-.grid button{
-  padding:15px;
-  border:none;
-  border-radius:15px;
-  background:linear-gradient(90deg,#6d28d9,#9333ea);
-  color:white;
-  font-size:14px;
-  transition:0.2s;
+.balance p{
+ font-size:32px;
+ margin-top:10px;
+ color:#ffd700;
 }
 
-.grid button:active{
-  transform:scale(0.97);
+.card-grid{
+ margin-top:20px;
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:15px;
 }
 
-/* PAGES */
-.page{display:none;}
-.page.active{display:block;}
-
-/* BOTTOM MENU */
-.bottom{
-  position:fixed;
-  bottom:10px;
-  left:10px;
-  right:10px;
-  background:#111827;
-  border-radius:20px;
-  display:flex;
-  justify-content:space-around;
-  padding:10px;
+.card{
+ background:#151526;
+ padding:20px;
+ border-radius:18px;
+ text-align:center;
+ border:1px solid #29294a;
 }
 
-.bottom button{
-  background:none;
-  border:none;
-  color:#aaa;
-  font-size:12px;
+.card span{
+ font-size:30px;
 }
 
-.bottom button.active{
-  color:#00ffc8;
-  transform:scale(1.1);
+.card h4{
+ margin-top:10px;
 }
+
+button{
+ background:#00eaff;
+ border:none;
+ padding:12px 20px;
+ border-radius:15px;
+ font-weight:bold;
+ margin-top:15px;
+}
+
 </style>
+
 </head>
 
 <body>
 
-<!-- HOME -->
-<div id="home" class="page active">
+<div class="container">
 
-<header>
-  <h1>🎮 EpicVault PRO</h1>
-</header>
-
-<div class="balance">💰 Balance: 0 ⭐</div>
-
-<div class="grid">
-
-<button>⭐ Buy Stars</button>
-<button>💎 Premium Cases</button>
-<button>🎁 Free Cases</button>
-<button>🎰 Slots</button>
-<button>💥 Crash</button>
-<button>🎲 Dice</button>
-<button>🃏 Blackjack</button>
-<button>💰 Wallet</button>
-<button>👥 Referrals</button>
-<button>🎯 Tasks</button>
-<button>🏆 Leaderboard</button>
-<button>⚙️ Settings</button>
-
+<div class="header">
+<div class="logo">🎮 EpicVault</div>
+<div>⭐ 0</div>
 </div>
-
-</div>
-
-<!-- CASES -->
-<div id="cases" class="page">
-
-<header><h1>🎁 Cases</h1></header>
 
 <div class="balance">
-Free Case<br><br>
-Premium Case
+<h3>Balance</h3>
+<p>0 ⭐</p>
 </div>
-
-</div>
-
-<!-- PROFILE -->
-<div id="profile" class="page">
-
-<header><h1>👤 Profile</h1></header>
-
-<div class="balance">
-User: EpicVault Player<br>
-Balance: 0 ⭐
-</div>
-
-</div>
-
-<!-- BOTTOM MENU -->
-<div class="bottom">
-
-<button class="active" onclick="go('home',this)">🏠</button>
-<button onclick="go('cases',this)">🎁</button>
-<button onclick="go('profile',this)">👤</button>
-
-</div>
-
-<script>
-function go(page,btn){
-
-  document.querySelectorAll(".page").forEach(p=>{
-    p.classList.remove("active");
-  });
-
-  document.getElementById(page).classList.add("active");
-
-  document.querySelectorAll(".bottom button").forEach(b=>{
-    b.classList.remove("active");
-  });
-
-  btn.classList.add("active");
-}
-</script>
-
-</body>
-</html>
