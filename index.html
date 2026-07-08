@@ -204,3 +204,36 @@ button{
  box-shadow:0 0 20px #00eaff;
  transition:.3s;
 }
+body{
+ overflow-x:hidden;
+}
+
+.logo{
+ text-shadow:0 0 15px #00eaff;
+}
+
+.balance{
+ animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+ from{
+  box-shadow:0 0 15px #00eaff55;
+ }
+ to{
+  box-shadow:0 0 35px #00eaffaa;
+ }
+}
+
+.card{
+ transition:.3s;
+}
+
+.card button{
+ cursor:pointer;
+}
+
+button:hover{
+ transform:scale(1.05);
+ box-shadow:0 0 20px #00eaff;
+}
