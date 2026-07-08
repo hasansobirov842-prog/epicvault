@@ -118,3 +118,122 @@ overflow:auto;
 padding:20px;
 }
 </style>
+  </head>
+
+<body>
+
+<header>
+🎮 EPIC VAULT
+</header>
+
+<div class="balance">
+<h2>Balance</h2>
+<div class="money">0 ⭐</div>
+<p style="margin-top:10px;color:#9ca3af;">Wallet: TON</p>
+</div>
+
+<div class="grid">
+
+<div class="card" onclick="openPage('free')">
+<img src="https://picsum.photos/400/300?random=1">
+<h3>🎁 Free Case</h3>
+<p>Open every 24 hours</p>
+</div>
+
+<div class="card" onclick="openPage('premium')">
+<img src="https://picsum.photos/400/300?random=2">
+<h3>💎 Premium Case</h3>
+<p>Rare NFT Gifts</p>
+</div>
+
+<div class="card" onclick="openPage('casino')">
+<img src="https://picsum.photos/400/300?random=3">
+<h3>🎰 Casino</h3>
+<p>Crash • Dice • Slots</p>
+</div>
+
+<div class="card" onclick="openPage('wallet')">
+<img src="https://picsum.photos/400/300?random=4">
+<h3>💰 Wallet</h3>
+<p>Stars & TON</p>
+</div>
+
+</div>
+
+<div class="bottom">
+<button>🏠 Home</button>
+<button>🎁 Cases</button>
+<button>👤 Profile</button>
+</div>
+
+<div class="popup" id="popup">
+
+<button onclick="closePage()" style="
+padding:12px 20px;
+border:none;
+border-radius:12px;
+background:#7b2ff7;
+color:white;
+margin-bottom:20px;">
+⬅ Back
+</button>
+
+<div id="content"></div>
+
+</div>
+
+<script>
+
+function openPage(type){
+
+let html="";
+
+if(type=="free"){
+html=`
+<h2>🎁 Free Case</h2>
+<p>Open a free case every day.</p>
+<button style="margin-top:20px;padding:15px 30px;background:#00c853;color:white;border:none;border-radius:15px;">
+OPEN CASE
+</button>
+`;
+}
+
+if(type=="premium"){
+html=`
+<h2>💎 Premium Case</h2>
+<p>Chance to win Stars, TON and NFT Gifts.</p>
+<button style="margin-top:20px;padding:15px 30px;background:#7b2ff7;color:white;border:none;border-radius:15px;">
+OPEN PREMIUM
+</button>
+`;
+}
+
+if(type=="casino"){
+html=`
+<h2>🎰 Casino</h2>
+
+<div class="card"><h3>🚀 Crash</h3></div>
+<div class="card"><h3>🎲 Dice</h3></div>
+<div class="card"><h3>🎰 Slots</h3></div>
+<div class="card"><h3>🃏 Blackjack</h3></div>
+`;
+}
+
+if(type=="wallet"){
+html=`
+<h2>💰 Wallet</h2>
+<p>TON Balance: 0</p>
+<p>Stars: 0 ⭐</p>
+`;
+}
+
+document.getElementById("content").innerHTML=html;
+document.getElementById("popup").style.display="block";
+
+}
+
+function closePage(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
