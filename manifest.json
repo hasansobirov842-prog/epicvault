@@ -1,1 +1,11 @@
-
+{
+  "name": "EpicVault",
+  "short_name": "EpicVault",
+  "description": "Premium Telegram Stars & Crypto Rewards",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#111827",
+  "orientation": "portrait",
+  "icons": []
+}
