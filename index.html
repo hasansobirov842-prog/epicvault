@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EpicVault</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EpicVault</title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
 </head>
 <body>
 
 <div id="app">
 
-    <header class="header">
-        <div class="logo">💎 EpicVault</div>
-        <div class="balance">
-            ⭐ <span id="balance">0</span>
-        </div>
-    </header>
+<header class="header">
+<div class="logo">💎 EpicVault</div>
+<div class="balance">
+⭐ <span id="balance">0</span>
+</div>
+</header>
 
-    <main class="home">
+<main class="home">
 
-        <h1>Welcome</h1>
-        <p>Win Telegram Stars, Crypto and Rewards.</p>
+<div class="hero">
+<h1>👋 Welcome Back</h1>
+<p>Win Telegram Stars • TON • Rewards</p>
+</div>
 
-        <div class="grid">
+<div class="card balance-card">
+<h2>⭐ Your Balance</h2>
+<h1 id="balanceText">0 Stars</h1>
+<button class="claim">➕ Claim Daily Reward</button>
+</div>
 
-            <button id="cases">🎁 Cases</button>
-            <button id="crash">📈 Crash</button>
-            <button id="dice">🎲 Dice</button>
-            <button id="blackjack">🃏 Blackjack</button>
+<h2 class="title">⚡ Quick Actions</h2>
 
-            <button id="wallet">👛 Wallet</button>
-            <button id="stars">⭐ Buy Stars</button>
-            <button id="leaderboard">🏆 Leaderboard</button>
-            <button id="settings">⚙ Settings</button>
+<div class="grid">
 
-        </div>
+<button id="cases">🎁 Cases</button>
 
-    </main>
+<button id="crash">📈 Crash</button>
 
-    <nav class="bottom-nav">
+<button id="dice">🎲 Dice</button>
 
-        <button>🏠 Home</button>
-        <button>🎮 Games</button>
-        <button>💰 Wallet</button>
-        <button>👤 Profile</button>
+<button id="blackjack">🃏 Blackjack</button>
 
-    </nav>
+<button id="wallet">👛 Wallet</button>
+
+<button id="stars">⭐ Buy Stars</button>
+
+<button id="leaderboard">🏆 Leaderboard</button>
+
+<button id="settings">⚙️ Settings</button>
+
+</div>
+
+<div class="card">
+<h2>🔥 Hot Events</h2>
+
+<p>🎁 Free Case every 24 hours</p>
+
+<p>⭐ Double Stars Weekend</p>
+
+<p>💎 New Legendary Case</p>
+
+</div>
+
+</main>
+
+<nav class="bottom-nav">
+
+<button>🏠 Home</button>
+
+<button>🎮 Games</button>
+
+<button>💰 Wallet</button>
+
+<button>👤 Profile</button>
+
+</nav>
 
 </div>
 
